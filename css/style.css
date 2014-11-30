@@ -247,6 +247,7 @@ body {
 .price {
   position: relative;
   background: #f2f2f2;
+  margin-bottom: 40px;
   padding-bottom: 100px;
 }
 .price input {
@@ -282,6 +283,9 @@ body {
   display: table;
   clear: both;
   width: 300%;
+  -webkit-transform: translate(-258px);
+  -ms-transform: translate(-258px);
+  transform: translate(-258px);
 }
 .price__item {
   float: left;
@@ -343,4 +347,33 @@ body {
   margin: 0;
   line-height: 2.14285714;
   text-transform: uppercase;
+}
+.info {
+  text-align: center;
+}
+.info__slogan {
+  margin-bottom: 35px;
+  font-weight: 300;
+  font-size: 23.996px;
+}
+.info__slogan p {
+  margin: 0;
+}
+.contacts {
+  margin-bottom: 35px;
+}
+.contacts__part {
+  margin: 0 20px 20px;
+}
+.contacts__part-title {
+  margin: 0;
+  font-size: 18.004px;
+  font-weight: bold;
+}
+.contacts__part-link {
+  text-decoration: none;
+  color: inherit;
+  color: #d22856;
+  font-size: 23.996px;
+  font-weight: 300;
 }
