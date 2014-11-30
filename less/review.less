@@ -1,4 +1,60 @@
-@import url("variables.less");
-@import url("mixin.less");
+.review {
+    position: relative;
+    background: linear-gradient(-5deg, @bg-second 90px, transparent 90px);
+    
+    input {
+        display: none;
+    }
+}
 
+.review__controls {
+    position: absolute;
+    bottom: (@font-size * (130px / 14px));
+    width: @width-main;
+    text-align: center;
+    
+    #rev-slide-01:checked~& label[for="rev-slide-01"],
+    #rev-slide-02:checked~& label[for="rev-slide-02"],
+    #rev-slide-03:checked~& label[for="rev-slide-03"] {
+        background: @bg-main;
+        border: 3px solid @bg-dark;        
+    }
+    
+    label {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 6px;
+        background: @bg-second;
+        border: 3px solid @bg-main;
+        border-radius: 50%;
+    }
+}
 
+.review__slider-inner {
+    width: 100%;
+    height: (@font-size * (270px / 14px));
+    padding-bottom: (@font-size * (100px / 14px));
+    overflow: hidden;
+}
+
+.review__slider {
+    width: 300%;
+}
+
+.review__item {
+    float: left;
+    width: @width-main;
+    text-align: center;
+}
+
+.review__item-title {
+    .offers__item-title;
+    font-style: normal;
+}
+
+.review__item-text {
+    .offers__item-text;
+    margin-left: 20px;
+    margin-right: 20px;
+}

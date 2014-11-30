@@ -1,0 +1,107 @@
+.price {
+    position: relative;
+    background: @bg-second;
+    padding-bottom: (@font-size * (100px / 14px));
+    
+    input {
+        display: none;
+    }
+}
+
+.price__controls {
+    position: absolute;
+    bottom: (@font-size * (40px / 14px));
+    width: @width-main;
+    text-align: center;
+    
+    #price-slide-01:checked~& label[for="price-slide-01"],
+    #price-slide-02:checked~& label[for="price-slide-02"],
+    #price-slide-03:checked~& label[for="price-slide-03"] {
+        background: transparent;
+        border: 3px solid @bg-dark;        
+    }
+    
+    label {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 6px;
+        background: @bg-price_slide;
+        border: 3px solid @bg-second;
+        border-radius: 50%;
+    }
+}
+
+
+.price__slider-inner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.price__slider {
+    .clearfix ();
+    width: 300%;
+}
+
+.price__item {
+    float: left;
+    position: relative;
+    .box-size (@width-price; 0; 0);
+    text-align: center;
+    border-left: 2px solid @bg-line;
+    border-top: none;
+    border-bottom: none;
+    
+    &:last-child {
+        border-right: 2px solid @bg-line;
+    }
+    
+    &--hit:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 74px;
+        height: 73px;
+        background: url("../img/flag-hit.png");
+    }
+}
+
+.price__item-title {
+    padding: (@font-size * (20px / 14px)) 20px;
+    .background (@bg-dark);
+}
+
+.price__item-title__name {
+    margin: 0;
+    font-size: @font-size--title;
+    .line-height (30px; 18px);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price__item-title__price {
+    margin: 0;
+    font-size: @font-size--slogan;
+    .line-height (30px; 24px);
+    .font-light ();
+}
+
+.price__item-func {
+    padding: (@font-size * (15px / 14px)) 20px;
+    background: @bg-main;
+    background-image: url("../img/mark-no.gif");
+    background-repeat: no-repeat;
+    background-position: (100% - 8px) center;
+    text-align: left;
+    border-bottom: 2px solid @bg-line;
+    
+    &--on {
+        background-image: url("../img/mark-yes.gif");
+    }
+}
+
+.price__item-func__name {
+    margin: 0;
+    .line-height (30px; 14px);
+    text-transform: uppercase;
+}
