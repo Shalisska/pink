@@ -1,21 +1,22 @@
 .menu {
-    text-align: right;
+    float: right;
 }
 
 .menu__btn {
     display: inline-block;
+    margin-top: (@font-size * (6px / 14px));
     width: 50px;
     height: 24px;
-    background: url("../img/menu_open.gif") no-repeat center center;
+    background: url("../img/menu_open.png") no-repeat center center;
+    cursor: pointer;
 }
 
 .menu__list {
     .reset-ul ();
     position: absolute;
     top: 0;
-    left: 50%;
-    margin-left: -(@width-main / 2);
-    width: @width-main;
+    right: 0;
+    width: 100%;
     .background (@bg-dark);
     display: none;    
 }
@@ -34,7 +35,7 @@
     display: inline-block;
     width: 62px;
     height: 62px;
-    background: url("../img/menu_esc.gif") no-repeat center center;
+    background: url("../img/menu_esc.png") no-repeat center center;
 }
 
 .menu__list-item {

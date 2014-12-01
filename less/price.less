@@ -12,37 +12,57 @@
 .price__controls {
     position: absolute;
     bottom: (@font-size * (40px / 14px));
-    width: @width-main;
+    width: 100%;
     text-align: center;
     
-    #price-slide-01:checked~& label[for="price-slide-01"],
-    #price-slide-02:checked~& label[for="price-slide-02"],
-    #price-slide-03:checked~& label[for="price-slide-03"] {
+    #price-slide-01:checked~& label[for="price-slide-01"]:before,
+    #price-slide-02:checked~& label[for="price-slide-02"]:before,
+    #price-slide-03:checked~& label[for="price-slide-03"]:before {
         background: transparent;
         border: 3px solid @bg-dark;        
     }
     
     label {
+        position: relative;
         display: inline-block;
-        width: 6px;
-        height: 6px;
-        margin: 0 6px;
-        background: @bg-price_slide;
-        border: 3px solid @bg-second;
-        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin: 0 3px;
+        cursor: pointer;
+                
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            left: 50%;
+            margin-left: -6px;
+            width: 6px;
+            height: 6px;            
+            background: @bg-price_slide;
+            border: 3px solid @bg-second;
+            border-radius: 50%;
+        }
     }
+    
+    
 }
 
 
 .price__slider-inner {
+    position: relative;
     width: 100%;
+    height: (@font-size * (286px / 14px));
     overflow: hidden;
 }
 
 .price__slider {
     .clearfix ();
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -(@width-price * 3 / 2);
     width: 300%;
-    transform: translate(-258px);
 }
 
 .price__item {
@@ -91,19 +111,17 @@
 .price__item-func {
     padding: (@font-size * (15px / 14px)) 20px;
     background: @bg-main;
-    background-image: url("../img/mark-no.gif");
+    background-image: url("../img/mark-no.png");
     background-repeat: no-repeat;
     background-position: (100% - 8px) center;
     text-align: left;
+    .line-height (30px; 14px);
+    text-transform: uppercase;
     border-bottom: 2px solid @bg-line;
     
     &--on {
-        background-image: url("../img/mark-yes.gif");
+        background-image: url("../img/mark-yes.png");
     }
 }
 
-.price__item-func__name {
-    margin: 0;
-    .line-height (30px; 14px);
-    text-transform: uppercase;
-}
+

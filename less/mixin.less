@@ -51,4 +51,14 @@
     line-height: unit((@a / @b));
 }
 
-.
+.gradient (@grad-1; @grad-2) {
+    position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;        
+        width: 100%;
+        height: @height-gradient;
+        background: linear-gradient(to left top, @grad-1 49%, @grad-2 51%);
+    }
+}
