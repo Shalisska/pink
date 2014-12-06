@@ -2,7 +2,10 @@
 <html lang="ru">
     <head>
         <title>Pink</title>
-        <meta charset="utf-8">        
+        <meta charset="utf-8">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,400&subset=latin,cyrillic-ext,cyrillic" rel="stylesheet" type="text/css">        
     </head>
     <body>
         <header class="header">
@@ -24,9 +27,9 @@
                 <div class="download">
                     <a class="download__btn" href="#">Скачать приложение</a>
                     <figure class="download__labels">
-                        <a class="download__labels-item"><img src="img/prew-apple.gif" alt="Apple"></a>
-                        <a class="download__labels-item"><img src="img/prew-andr.gif" alt="Android"></a>
-                        <a class="download__labels-item"><img src="img/prew-ms.gif" alt="Microsoft"></a>
+                        <a class="download__labels-item"><img src="img/prew-apple.png" alt="Apple"></a>
+                        <a class="download__labels-item"><img src="img/prew-andr.png" alt="Android"></a>
+                        <a class="download__labels-item"><img src="img/prew-ms.png" alt="Microsoft"></a>
                         <figcaption class="preview__download-labels-explain">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</figcaption>
                     </figure>
                 </div>
@@ -48,9 +51,11 @@
                     <div class="offers__item">
                         <p class="offers__item-title">Заводит новых друзей</p>
                         <p class="offers__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-                    </div>
+                    </div>                    
                 </div>
-                <img src="img/iphone.jpg" alt="Всем привет!">
+                <div class="features__iphone">
+                    <a class="features__iphone-layout" href="#"><img src="img/iphone.png" alt="Всем привет!"></a>
+                </div>                
             </div>
             <div class="review">
                 <input type="radio" name="rev-slider" id="rev-slide-01" checked>
@@ -67,11 +72,11 @@
                             <cite class="review__item-title">Николай Петров</cite>
                             <blockquote class="review__item-text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</blockquote>
                         </div>
-                        <div class="review">
+                        <div class="review__item">
                             <cite class="review__item-title"></cite>
                             <blockquote class="review__item-text"></blockquote>
                         </div>
-                        <div class="review">
+                        <div class="review__item">
                             <cite class="review__item-title"></cite>
                             <blockquote class="review__item-text"></blockquote>
                         </div>
@@ -95,28 +100,28 @@
                                 <p class="price__item-title__price">1,99 USD</p>
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Розовый фильтр</p>
+                                Розовый фильтр
                             </div>
                             <div class="price__item-func">
-                                <p class="price__item-func__name">Смайлики</p>
+                                Смайлики
                             </div>
                             <div class="price__item-func">
-                                <p class="price__item-func__name">Комментарии</p>
+                                Комментарии
                             </div>
                         </div>
-                        <div class="price__item">
+                        <div class="price__item price__item--hit">
                             <div class="price__item-title">
                                 <p class="price__item-title__name">Стандарт</p>
                                 <p class="price__item-title__price">3,99 USD</p>
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Розовый фильтр</p>
+                                Розовый фильтр
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Смайлики</p>
+                                Смайлики
                             </div>
                             <div class="price__item-func">
-                                <p class="price__item-func__name">Комментарии</p>
+                                Комментарии
                             </div>
                         </div>
                         <div class="price__item">
@@ -125,13 +130,13 @@
                                 <p class="price__item-title__price">9,99 USD</p>
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Розовый фильтр</p>
+                                Розовый фильтр
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Смайлики</p>
+                                Смайлики
                             </div>
                             <div class="price__item-func  price__item-func--on">
-                                <p class="price__item-func__name">Комментарии</p>
+                                Комментарии
                             </div>
                         </div>
                     </div>
@@ -158,7 +163,7 @@
                         <a class="contacts__part-link" href="maps:||55.75399400, 37.62209300">Санкт-Петербург, Невский проспект, д.20</a>
                     </div>
                 </div>
-                <img class="info__map" src="#">
+                <img class="info__map" src="img/map.jpg">
             </div>
         </footer>        
     </body>

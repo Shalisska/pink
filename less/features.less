@@ -1,0 +1,52 @@
+.features {
+    text-align: center;
+}
+
+.features__slogan {
+    .font-light ();
+    font-size: @font-size--slogan;        
+    
+    p {
+        margin: 0 50px (@font-size * (30px / 14px));
+    }
+}
+
+.offers {
+    background: @bg-second;
+    padding-top: (@font-size * (50px / 14px));
+    .gradient (transparent; @bg-main);
+    
+    &:before {
+        top: 0;
+        left: 0;
+    }
+}
+
+.offers__item {
+    margin: 0 20px;
+}
+
+.offers__item-title {
+    margin-bottom: (@font-size * (15px / 14px));
+    font-weight: bold;
+    font-size: @font-size--title;
+    .line-height (24px; 18px);
+    color: @color-title;
+}
+
+.offers__item-text {
+    margin-bottom: 0;
+    padding-bottom: (@font-size * (35px / 14px));
+    .line-height (24px; 14px);
+}
+
+.features__iphone {
+    .box-size (@margin-bottom: 45px; @padding: 0);
+    height: 280px;
+    overflow: hidden;
+    background: @bg-second;
+}
+
+.features__iphone-layout {
+    display: inline-block;    
+}

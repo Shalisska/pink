@@ -1,0 +1,81 @@
+.review {
+    position: relative;
+    background: linear-gradient(to top, @bg-second 70px, transparent 70px);
+    .gradient (@bg-second; @bg-main);
+    
+    &:before {
+        bottom: 65px;
+        left: 0;
+    }
+    
+    input {
+        display: none;
+    }
+}
+
+.review__controls {
+    position: absolute;
+    bottom: (@font-size * (130px / 14px));
+    width: 100%;
+    text-align: center;
+    
+    #rev-slide-01:checked~& label[for="rev-slide-01"]:before,
+    #rev-slide-02:checked~& label[for="rev-slide-02"]:before,
+    #rev-slide-03:checked~& label[for="rev-slide-03"]:before {
+        background: @bg-main;
+        border: 3px solid @bg-dark;        
+    }
+    
+    label {
+        position: relative;
+        display: inline-block;
+        margin: 0 3px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            left: 50%;
+            margin-left: -6px;
+            width: 6px;
+            height: 6px;            
+            background: @bg-second;
+            border: 3px solid @bg-main;
+            border-radius: 50%;
+        }
+    }
+}
+
+.review__slider-inner {
+    width: 100%;    
+    padding-bottom: (@font-size * (100px / 14px));
+    overflow: hidden;
+}
+
+.review__slider {
+    margin: 0 auto;
+    .clearfix ();
+}
+
+.review__item {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.review__item-title {
+    .offers__item-title;
+    font-style: normal;
+}
+
+.review__item-text {
+    .offers__item-text;
+    margin-left: 20px;
+    margin-right: 20px;
+}

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Gotham Rounded Book";
+  src: url("../fonts/GothamRoundedBook_21018.ttf") format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    .background (@bg-main);
+    .background (url("../img/bg-main.jpg") no-repeat center top);
+    font-family: @font-family;
+    font-size: @font-size;
+}
