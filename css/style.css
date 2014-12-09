@@ -10,8 +10,11 @@ body {
   padding: 0;
 }
 body {
-  background: #ffffff url("../img/bg-main.jpg") no-repeat center top;
+  background-color: #ffffff;
   color: #283645;
+  background: url("../img/bg-main.jpg") no-repeat center top;
+  -webkit-background-size: auto 488px;
+  background-size: auto 488px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
@@ -22,13 +25,13 @@ body {
   box-sizing: border-box;
   width: auto;
   margin-bottom: 25px;
-  padding: 14px 20px;
+  padding: 4.37% 6.25%;
   position: relative;
   content: '';
   display: table;
   clear: both;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
 }
 .logo {
@@ -60,7 +63,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  background: #283645;
+  background-color: #283645;
   color: #ffffff;
   display: none;
 }
@@ -102,6 +105,7 @@ body {
 .preview {
   margin-bottom: 40px;
   color: #ffffff;
+  background: url("../img/iphone-hand-1.png") no-repeat 40% 30%;
 }
 .preview__slogan {
   margin: 0 30px 300px;
@@ -110,7 +114,7 @@ body {
   font-size: 23.996px;
 }
 .download {
-  background: #283645;
+  background-color: #283645;
   color: #ffffff;
   padding: 28px 19px;
 }
@@ -150,7 +154,7 @@ body {
 .download__labels a:last-of-type {
   margin-right: 0;
 }
-.preview__download-labels-explain {
+.download__labels-explain {
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.71428571;
@@ -386,7 +390,7 @@ body {
 }
 .price__item-title {
   padding: 20px 20px;
-  background: #283645;
+  background-color: #283645;
   color: #ffffff;
 }
 .price__item-title__name {
