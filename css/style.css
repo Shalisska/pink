@@ -4,6 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 body {
   overflow: hidden;
   width: 100%;
@@ -22,19 +27,41 @@ body {
   box-sizing: border-box;
   width: auto;
   margin-bottom: 17px;
-  padding: 4.37% 6.25%;
+  padding: 0;
   position: relative;
-  content: '';
-  display: table;
-  clear: both;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
 }
+.header__top {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4.37% 6.25%;
+}
+.header__top:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  right: 6.25%;
+  width: 50px;
+  height: 50px;
+  background: url("../img/menu-burger.svg") no-repeat center center;
+  cursor: pointer;
+}
+.header__top--open {
+  background: #283645;
+  -webkit-box-shadow: inset 0 -1px #000000;
+  box-shadow: inset 0 -1px #000000;
+}
+.header__top--open:before {
+  background: url("../img/menu-cross.svg") no-repeat center center;
+}
 .logo {
   float: left;
-  position: relative;
-  z-index: 10;
   font-family: "Gotham Rounded Book", "Arial", sans-serif;
   text-decoration: none;
   color: inherit;
@@ -42,29 +69,25 @@ body {
   font-size: 32.088px;
 }
 .menu {
-  float: right;
+  display: none;
 }
-.menu__btn {
-  display: inline-block;
-  margin-top: 6px;
-  width: 50px;
-  height: 24px;
-  background: url("../img/menu-burger.svg") no-repeat center center;
-  cursor: pointer;
+.menu--open {
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 50;
 }
 .menu__list {
+  background-color: #283645;
+  color: #ffffff;
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  background-color: #283645;
-  color: #ffffff;
-  display: none;
 }
-.menu__list-esc,
+.menu__list-item {
+  -webkit-box-shadow: inset 0 -1px #000000, inset 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 -1px #000000, inset 0 1px rgba(255, 255, 255, 0.15);
+}
 .menu__list-item a {
   display: block;
   -webkit-box-sizing: border-box;
@@ -73,24 +96,7 @@ body {
   width: auto;
   margin-bottom: 0;
   padding: 0;
-}
-.menu__list-esc {
-  text-align: right;
-  -webkit-box-shadow: inset 0 -1px #000000;
-  box-shadow: inset 0 -1px #000000;
-}
-.menu__list-esc a {
-  display: inline-block;
-  width: 62px;
-  height: 62px;
-  background: url("../img/menu_esc.png") no-repeat center center;
-}
-.menu__list-item {
-  -webkit-box-shadow: inset 0 -1px #000000, inset 0 1px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 -1px #000000, inset 0 1px rgba(255, 255, 255, 0.15);
-}
-.menu__list-item a {
-  padding: 17px 17px;
+  padding: 5.32% 17px;
   text-decoration: none;
   color: inherit;
   font-weight: bold;
@@ -100,32 +106,36 @@ body {
   text-transform: uppercase;
 }
 .preview {
+  position: relative;
   margin-bottom: 40px;
   color: #ffffff;
 }
 .preview__slogan {
   min-height: 66px;
-  margin: 0 30px 300px;
+  margin: 0 30px 303px;
   text-align: center;
   font-weight: 300;
   font-size: 23.996px;
 }
-.download {
+.preview .download {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   background-color: #283645;
   color: #ffffff;
   padding: 28px 19px;
 }
-.download:before {
+.preview .download:before {
   content: '';
   position: absolute;
   top: -100%;
-  right: 8.5%;
+  right: 9.5%;
   width: 100%;
   height: 286px;
   background: url("../img/iphone-hand-1.png") no-repeat center center;
 }
-.download__btn {
+.preview .download__btn {
   max-width: 281px;
   display: block;
   -webkit-box-sizing: border-box;
@@ -133,7 +143,7 @@ body {
   box-sizing: border-box;
   width: auto;
   margin-bottom: 30px;
-  padding: 16px 16px;
+  padding: 15px 16px;
   margin: 0 auto 30px;
   text-align: center;
   text-decoration: none;
@@ -144,7 +154,7 @@ body {
   border: 3px solid #ffffff;
   border-radius: 40px;
 }
-.download__labels {
+.preview .download__labels {
   display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -155,21 +165,22 @@ body {
   margin: 0 10px;
   text-align: center;
 }
-.download__labels a {
+.preview .download__labels a {
   display: inline-block;
   margin-right: 37px;
   margin-bottom: 25px;
 }
-.download__labels a:last-of-type {
+.preview .download__labels a:last-of-type {
   margin-right: 0;
 }
-.download__labels-explain {
+.preview .download__labels-explain {
   max-width: 297px;
   margin: 0 auto 10px;
   font-weight: 300;
   line-height: 1.71428571;
 }
 .features {
+  margin-bottom: 45px;
   text-align: center;
 }
 .features__slogan {
@@ -179,35 +190,28 @@ body {
 .features__slogan p {
   margin: 0 50px 30px;
 }
-.offers {
+.features .offers {
   background: #f2f2f2;
   padding-top: 50px;
-  position: relative;
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(49%, transparent), color-stop(51%, #ffffff));
+  background-image: -webkit-linear-gradient(right bottom, transparent 49%, #ffffff 51%);
+  background-image: linear-gradient(to left top, transparent 49%, #ffffff 51%);
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: 100% 32px;
+  background-size: 100% 32px;
 }
-.offers:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 32px;
-  background: -webkit-gradient(linear, right bottom, left top, color-stop(49%, transparent), color-stop(51%, #ffffff));
-  background: -webkit-linear-gradient(right bottom, transparent 49%, #ffffff 51%);
-  background: linear-gradient(to left top, transparent 49%, #ffffff 51%);
-}
-.offers:before {
-  top: 0;
-  left: 0;
-}
-.offers__item {
+.features .offers__item {
   margin: 0 20px;
 }
-.offers__item-title {
-  margin-bottom: 15px;
+.features .offers__item-title {
+  margin: 0 auto 15px;
   font-weight: bold;
   font-size: 18.004px;
   line-height: 1.33333333;
   color: #000000;
 }
-.offers__item-text {
+.features .offers__item-text {
   margin-bottom: 0;
   padding-bottom: 35px;
   line-height: 1.71428571;
@@ -218,14 +222,12 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: auto;
-  margin-bottom: 45px;
+  margin-bottom: 0;
   padding: 0;
-  height: 280px;
   overflow: hidden;
-  background: #f2f2f2;
 }
-.features__iphone-layout {
-  display: inline-block;
+.features__iphone img {
+  width: 255px;
 }
 .review {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(70px, #f2f2f2), color-stop(70px, transparent));
@@ -289,9 +291,6 @@ body {
 }
 .review__slider {
   margin: 0 auto;
-  content: '';
-  display: table;
-  clear: both;
 }
 .review__item {
   float: left;
@@ -300,7 +299,7 @@ body {
   text-align: center;
 }
 .review__item-title {
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
   font-weight: bold;
   font-size: 18.004px;
   line-height: 1.33333333;
@@ -363,9 +362,6 @@ body {
   overflow: hidden;
 }
 .price__slider {
-  content: '';
-  display: table;
-  clear: both;
   position: absolute;
   top: 0;
   left: 50%;
@@ -459,21 +455,91 @@ body {
   font-size: 23.996px;
   font-weight: 300;
 }
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-body {
-  overflow: hidden;
+.bg__map {
   width: 100%;
 }
-body {
-  background: url("../img/background-1@1x.jpg") no-repeat center top;
-  -webkit-background-size: auto 488px;
-  background-size: auto 488px;
-  background-color: #ffffff;
-  color: #283645;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+@media (min-width: 700px) {
+  body {
+    background: url("../img/iphone-hand-2@1x.png") no-repeat 80% 184px, url("../img/background-2@1x.jpg") no-repeat center top;
+  }
+  .header {
+    max-height: 110px;
+    margin-bottom: 93px;
+  }
+  .header__top {
+    padding: 26px 5.71% 36px;
+  }
+  .header__top .logo:before {
+    content: '';
+    display: inline-block;
+    width: 59px;
+    height: 40px;
+    margin-right: 10px;
+    background: url("../img/glasses-simple@1x.png") no-repeat center center;
+  }
+  .preview {
+    margin: 0 51.14% 0 5.71%;
+  }
+  .preview__slogan {
+    margin: 0 auto;
+    max-width: 210px;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .preview .download {
+    padding: 32px 0 160px;
+    background: none;
+  }
+  .preview .download:before {
+    display: none;
+  }
+  .preview .download__btn {
+    margin-bottom: 45px;
+  }
+  .preview .download__labels {
+    margin: 0;
+  }
+  .preview .download__labels a {
+    margin-bottom: 30px;
+  }
+  .preview .download__labels-explain {
+    max-width: 320px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  .features__slogan {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  .features__slogan p {
+    margin: 0 auto 0;
+    line-height: 1.15;
+  }
+  .features__slogan p:last-child {
+    width: 360px;
+  }
+  .features .offers__item {
+    float: right;
+    width: 50%;
+    text-align: left;
+  }
+  .features__iphone {
+    position: relative;
+    width: 40%;
+    height: 430px;
+    margin-top: -40px;
+    margin-left: 35px;
+  }
+  .features__iphone img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -210px;
+    width: 420px;
+  }
+}
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
 }
