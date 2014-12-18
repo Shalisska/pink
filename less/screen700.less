@@ -65,6 +65,8 @@ body {
 }
     
 .features {
+	margin-bottom: 13px;
+	
     &__slogan {            
         margin-bottom: 40px;
         font-size: 40px;
@@ -79,14 +81,11 @@ body {
         }
     }
     
-    .offers {
+    .offers {		
         &__item {
             float: right;
             width: 50%;
             text-align: left;
-            
-            
-                        
         }
     }
     
@@ -104,15 +103,128 @@ body {
             margin-left: -210px;
             width: 420px;
         }
-    }
-
+    }	
 }    
     
+.clock {
+	display: block;
+}
     
+.review {
+	&__item {
+		position: relative;
+		
+		&-title {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 110px;
+			height: 50px;
+			
+			&-name {
+				font-size: 20px;
+			}
+			
+			&-info {
+				display: block;
+			}
+		}
+		
+		&-text {
+			margin: 0 5.7% 165px;
+			font-size: 18px;
+		}
+	}
+}   
+
+.price {
+	&__controls {
+		display: none;
+	}
+	
+	&__slider-inner {
+		text-align: center;
+	}
+	
+	&__slider {
+		position: static;
+		display: inline-block;
+		width: (620 / 700 * 100%);
+		margin: 0 auto;
+	}
+	
+	&__item {
+		width: 25%;
+		
+		&--hit:before {
+			background-position: -8px -7px;
+		}
+		
+		&-title {
+			padding: 14px 20px;
+			
+			&__name {
+				font-size: 16px;
+			}
+			
+			&__price {
+				font-size: 18px;
+			}
+		}
+		
+		&-func {
+			height: 46px;
+			background-position: center;
+			
+			&-text {
+				display: none;
+			}
+		}
+		
+		&--hidden {
+			display: block;
+			border-color: red;
+			
+			.price__item-title {
+				box-sizing: border-box;
+				background: none;
+				border-left: none;
+				border-bottom: 2px solid @bg-line;		
+			}
+			
+			.price__item-func {
+				background-image: none;
+				
+				&-text {
+					display: block;
+					padding: 8px 15px;
+					text-transform: none;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
     
-    
-    
-    
+.info {
+	&__slogan {
+		margin-bottom: 0;
+		font-size: 40px;
+	}
+}
+
+.contacts {
+	&__part {
+		display: inline-block;
+		width: 40%;
+		padding-top: 45px;
+	}
+}
+	
+.footer {
+	display: block;
+}
+	
 }
 
 

@@ -9,11 +9,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.clearfix:after {
-  content: '';
-  display: table;
-  clear: both;
-}
 body {
   overflow: hidden;
   width: 100%;
@@ -24,6 +19,11 @@ body {
   color: #283645;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 .header {
   display: block;
@@ -701,14 +701,16 @@ body {
     display: none;
   }
   .price__slider-inner {
-    height: 220px;
+    text-align: center;
   }
   .price__slider {
-    margin-left: -304px;
-    width: 400%;
+    position: static;
+    display: inline-block;
+    width: 88.57142857%;
+    margin: 0 auto;
   }
   .price__item {
-    width: 152px;
+    width: 25%;
   }
   .price__item--hit:before {
     background-position: -8px -7px;

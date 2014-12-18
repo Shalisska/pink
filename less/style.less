@@ -17,12 +17,6 @@ body {
     padding: 0;
 }
 
-.clearfix:after {
-    content:'';
-    display:table;
-    clear:both;
-}
-
 body {
     overflow: hidden;
     width: 100%;
@@ -33,7 +27,16 @@ body {
     font-size: @font-size;
 }
 
+.clearfix:after {
+    content:'';
+    display:table;
+    clear:both;
+}
 
+//.layout-center-wrapper {
+//	max-width: 940px;
+//	margin: 0 auto;
+//}
 
 .header {    
     .box-size (@margin-bottom: (@font-size * (17px / 14px)); @padding: 0);
