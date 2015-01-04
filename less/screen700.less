@@ -1,0 +1,236 @@
+@media (min-width: 700px) {
+    
+body {
+    background:
+        url("../img/iphone-hand-2@1x.png") no-repeat 80% 184px,
+        url("../img/background-2@1x.jpg") no-repeat center top;
+}
+    
+.header {
+    max-height: 110px;
+    margin-bottom: 93px;
+    
+    &__top {
+        padding: 26px 5.71% 36px;
+
+        .logo {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 59px;
+                height: 40px;
+                margin-right: 10px;
+                background: url("../img/glasses-simple@1x.png") no-repeat center center;
+            }
+        } 
+    }
+}    
+
+.preview {
+    margin: 0 51.14% 0 5.71%;
+    
+    &__slogan {
+        margin: 0 auto;
+        max-width: 210px;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    
+    .download {
+        padding: 32px 0 160px;
+        background: none;
+        
+        &:before {
+            display: none;
+        }
+        
+        &__btn {
+            margin-bottom: 45px;
+        }
+        
+        &__labels {
+            margin: 0;
+            
+            a {
+                margin-bottom: 30px;
+            }
+            
+            &-explain {
+                max-width: 320px;
+                font-size: 18px;
+                line-height: 1.45;
+            }
+        }
+    }
+}
+    
+.features {
+	margin-bottom: 13px;
+	
+    &__slogan {            
+        margin-bottom: 40px;
+        font-size: 40px;
+          
+        p {
+            margin: 0 auto 0;
+            line-height: 1.15;
+              
+            &:last-child {
+                width: 360px;
+            }
+        }
+    }
+    
+    .offers {		
+        &__item {
+            float: right;
+            width: 50%;
+            text-align: left;
+        }
+    }
+    
+    &__iphone {
+        position: relative;
+        width: 40%;
+        height: 430px;
+        margin-top: -40px;
+        margin-left: 35px;
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -210px;
+            width: 420px;
+        }
+    }	
+}    
+    
+.clock {
+	display: block;
+}
+    
+.review {
+	&__item {
+		position: relative;
+		
+		&-title {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 110px;
+			height: 50px;
+			
+			&-name {
+				font-size: 20px;
+			}
+			
+			&-info {
+				display: block;
+			}
+		}
+		
+		&-text {
+			margin: 0 5.7% 165px;
+			font-size: 18px;
+		}
+	}
+}   
+
+.price {
+	&__controls {
+		display: none;
+	}
+	
+	&__slider-inner {
+		text-align: center;
+	}
+	
+	&__slider {
+		position: static;
+		display: inline-block;
+		width: (620 / 700 * 100%);
+		margin: 0 auto;
+	}
+	
+	&__item {
+		width: 25%;
+		
+		&--hit:before {
+			background-position: -8px -7px;
+		}
+		
+		&-title {
+			padding: 14px 20px;
+			
+			&__name {
+				font-size: 16px;
+			}
+			
+			&__price {
+				font-size: 18px;
+			}
+		}
+		
+		&-func {
+			height: 46px;
+			background-position: center;
+			
+			&-text {
+				display: none;
+			}
+		}
+		
+		&--hidden {
+			display: block;
+			border-color: red;
+			
+			.price__item-title {
+				box-sizing: border-box;
+				background: none;
+				border-left: none;
+				border-bottom: 2px solid @bg-line;		
+			}
+			
+			.price__item-func {
+				background-image: none;
+				
+				&-text {
+					display: block;
+					padding: 8px 15px;
+					text-transform: none;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+    
+.info {
+	&__slogan {
+		margin-bottom: 0;
+		font-size: 40px;
+	}
+}
+
+.contacts {
+	&__part {
+		display: inline-block;
+		width: 40%;
+		padding-top: 45px;
+	}
+}
+	
+.footer {
+	display: block;
+}
+	
+}
+
+
+
+
+
+
+
+

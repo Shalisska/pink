@@ -27,7 +27,7 @@
 }
 
 .background (@value) {
-    background+_: @value;
+    background-color: @value;
     
     & when (@value = @bg-main) {    
         color: @color-dark;
@@ -61,4 +61,25 @@
         height: @height-gradient;
         background: linear-gradient(to left top, @grad-1 49%, @grad-2 51%);
     }
+}
+
+.gradient1 (@grad-1; @grad-2) {
+    background-image: linear-gradient(to left top, @grad-1 49%, @grad-2 51%);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% @height-gradient;
+}
+
+.item-title () {
+    margin: 0 auto (@font-size * (15px / 14px));
+    font-weight: bold;
+    font-size: @font-size--title;
+    .line-height (24px; 18px);
+    color: @color-title;
+}
+
+.item-text () {
+    margin-bottom: 0;
+    padding-bottom: 35px;
+    .line-height (24px; 14px);
 }
